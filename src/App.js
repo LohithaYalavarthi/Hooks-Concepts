@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import Quotes from './Quotes'
+import SecondComp from './renderData/SecondComp'
+import CounterClassComp from './StateRelated/CounterClassComp'
+import FunctionCount from './StateRelated/FunctionCount'
 
-function App() {
+function App () {
+  const [navigate, setNavigate] = useState(false)
+  function navigateToOther () {
+    setNavigate(true)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <FunctionCount />
+      {/* <CounterClassComp /> */}
+      {/* <SecondComp /> */}
+      {navigate ? (
+        <Quotes />
+      ) : (
+        <button onClick={navigateToOther}>Get Programming Quotes</button>
+      )}
+    </>
+  )
 }
 
-export default App;
+export default App
