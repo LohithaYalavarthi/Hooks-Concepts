@@ -5,6 +5,10 @@ import Quotes from './Quotes'
 import SecondComp from './renderData/SecondComp'
 import CounterClassComp from './StateRelated/CounterClassComp'
 import FunctionCount from './StateRelated/FunctionCount'
+import HookCounterOne from './EffectRelated/HookCounterOne'
+import MouseContainer from './EffectRelated/MouseContainer'
+import IntervalHookCounter from './EffectRelated/IntervalHookCounter'
+import DataFetching from './EffectRelated/DataFetching'
 
 function App () {
   const [navigate, setNavigate] = useState(false)
@@ -13,7 +17,11 @@ function App () {
   }
   return (
     <>
-      <FunctionCount />
+      <DataFetching />
+      {/* <IntervalHookCounter /> */}
+      {/* <MouseContainer /> */}
+      {/* <HookCounterOne /> */}
+      {/* <FunctionCount /> */}
       {/* <CounterClassComp /> */}
       {/* <SecondComp /> */}
       {navigate ? (
