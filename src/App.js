@@ -9,6 +9,7 @@ import HookCounterOne from './EffectRelated/HookCounterOne'
 import MouseContainer from './EffectRelated/MouseContainer'
 import IntervalHookCounter from './EffectRelated/IntervalHookCounter'
 import DataFetching from './EffectRelated/DataFetching'
+import AppMain from './ContextRelated/AppMain'
 
 function App () {
   const [navigate, setNavigate] = useState(false)
@@ -17,7 +18,8 @@ function App () {
   }
   return (
     <>
-      <DataFetching />
+      <AppMain />
+      {/* <DataFetching /> */}
       {/* <IntervalHookCounter /> */}
       {/* <MouseContainer /> */}
       {/* <HookCounterOne /> */}
