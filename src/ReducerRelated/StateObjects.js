@@ -26,7 +26,7 @@ const reducerFunc = (state, action) => {
       return state
   }
 }
-export default function Counter2 () {
+export default function StateObjects () {
   const [count, dispatch] = useReducer(reducerFunc, initialState)
   return (
     <div>

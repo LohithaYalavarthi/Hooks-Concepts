@@ -13,7 +13,7 @@ const reducerFunc = (state, action) => {
       return state
   }
 }
-export default function Counter3 () {
+export default function MultipleReducers () {
   const [count, dispatch] = useReducer(reducerFunc, initialState)
   const [count2, dispatch2] = useReducer(reducerFunc, initialState)
 
