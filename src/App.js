@@ -10,11 +10,10 @@ import MouseContainer from './EffectRelated/MouseContainer'
 import IntervalHookCounter from './EffectRelated/IntervalHookCounter'
 import DataFetching from './EffectRelated/DataFetching'
 import AppMain from './ContextRelated/AppMain'
-import NestCompt1 from './ReducerRelated/NestCompt1'
-import NestCompt2 from './ReducerRelated/NestCompt2'
-import NestCompt3 from './ReducerRelated/NestCompt3'
-
-
+import ParentComponent from './useCallbackHook/ParentComponent'
+import Counter from './useMemoHook/Counter'
+import FocusInput from './useRefHook/FocusInput'
+import HookTimer from './useRefHook/HookTimer'
 
 function App () {
   const [navigate, setNavigate] = useState(false)
@@ -23,10 +22,11 @@ function App () {
   }
   return (
     <>
-      <AppMain />
-      <NestCompt1/>
-      <NestCompt2/>
-      <NestCompt3/>
+      <HookTimer />
+      {/* <FocusInput /> */}
+      {/* <AppMain /> */}
+      {/* <Counter /> */}
+      {/* <ParentComponent /> */}
       {/* <DataFetching /> */}
       {/* <IntervalHookCounter /> */}
       {/* <MouseContainer /> */}
@@ -37,7 +37,9 @@ function App () {
       {navigate ? (
         <Quotes />
       ) : (
-        <button onClick={navigateToOther}>Get Programming Quotes</button>
+        <>
+          {/* // <button onClick={navigateToOther}>Get Programming Quotes</button> */}
+        </>
       )}
     </>
   )
