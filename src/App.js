@@ -13,7 +13,8 @@ import AppMain from './ContextRelated/AppMain'
 import ParentComponent from './useCallbackHook/ParentComponent'
 import Counter from './useMemoHook/Counter'
 import FocusInput from './useRefHook/FocusInput'
-import HookTimer from './useRefHook/HookTimer'
+import PracticeHooks from './Experiementing/PracticeHooks'
+import RefHooks from './Experiementing/RefHooks'
 
 function App () {
   const [navigate, setNavigate] = useState(false)
@@ -22,7 +23,7 @@ function App () {
   }
   return (
     <>
-      <HookTimer />
+      <RefHooks />
       {/* <FocusInput /> */}
       {/* <AppMain /> */}
       {/* <Counter /> */}
